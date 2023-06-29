@@ -18,7 +18,6 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     runtimeOnly 'com.h2database:h2'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     // Logging
     implementation 'org.slf4j:slf4j-api:2.0.7'
@@ -26,7 +25,9 @@ dependencies {
     // Read for proper usage of WindowsCredential manager
     //implementation 'net.java.dev.jna:jna:5.13.0'
 
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testImplementation 'com.tngtech.archunit:archunit:1.0.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 
 }
