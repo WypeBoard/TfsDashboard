@@ -25,6 +25,9 @@ dependencies {
     // Read for proper usage of WindowsCredential manager
     //implementation 'net.java.dev.jna:jna:5.13.0'
 
+    // MISC
+    implementation group: 'org.json', name: 'json', version: '20230618'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testImplementation 'com.tngtech.archunit:archunit:1.0.1'
