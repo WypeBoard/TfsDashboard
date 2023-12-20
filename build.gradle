@@ -17,13 +17,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final'
     runtimeOnly 'com.h2database:h2'
 
     // Logging
     implementation 'org.slf4j:slf4j-api:2.0.7'
-
-    // Read for proper usage of WindowsCredential manager
-    //implementation 'net.java.dev.jna:jna:5.13.0'
 
     // MISC
     implementation group: 'org.json', name: 'json', version: '20230618'

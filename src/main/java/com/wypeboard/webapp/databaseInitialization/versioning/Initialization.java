@@ -18,15 +18,14 @@ public class Initialization implements DatabaseVersioningApi {
 
     @Override
     public void runScript() {
-        String createTableQuery = String.join(" ", "CREATE TABLE IF NOT EXISTS VERSIONING (",
-                "ID VARCHAR(36) PRIMARY KEY,",
-                "EXECUTED_METHOD VARCHAR(500),",
+        String createTableQuery = "CREATE TABLE IF NOT EXISTS VERSIONING (" + String.join(", ",
+                "ID VARCHAR(36) PRIMARY KEY",
+                "EXECUTED_METHOD VARCHAR(500)",
                 "STATUS VARCHAR(50)",
                 "CREATEDBY VARCHAR(500)",
                 "CREATED TIMESTAMP",
                 "ALTEREDBY VARCHAR(500)",
-                "ALTERED TIMESTAMP",
-                ")");
+                "ALTERED TIMESTAMP);");
         jdbcTemplate.execute(createTableQuery);
     }
 
