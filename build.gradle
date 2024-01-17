@@ -18,7 +18,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final'
+    implementation group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '3.2.1'
     runtimeOnly 'com.h2database:h2'
+
+    // Database
+    implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
 
     // Logging
     implementation 'org.slf4j:slf4j-api:2.0.7'

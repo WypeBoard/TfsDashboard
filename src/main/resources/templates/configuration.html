@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html layout:decorate="~{/layout.html}" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<div layout:fragment="content">
+  <!-- Page-specific content goes here -->
+  <form th:action="@{/configuration/commit}" method="post" th:object="${command}" enctype="application/x-www-form-urlencoded">
+    <div class="mb-3 form-group">
+      <label for="accessToken" class="form-label">Authentication token string</label>
+      <input type="text" class="form-control" id="accessToken" name="accessToken" th:field="*{accessToken}" aria-describedby="help_accessToken" tabindex="0">
+      <div id="help_accessToken" class="form-text"><span>Find this in ADO -> your avatar -> Security -> Make a personal access token</span></div>
+    </div>
+    <div class="mb-3 form-group">
+      <label for="baseUrl" class="form-label">ADO repository URL</label>
+      <input type="text" class="form-control" id="baseUrl" name="baseUrl" th:field="*{baseUrl}" aria-describedby="help_baseUrl" tabindex="0">
+      <div id="$help_baseUrl" class="form-text"><span>e.g. https://source.netcompany.com/tfs/Netcompany/ATP0005</span></div>
+    </div>
+    <div class="mb-3 form-group">
+      <label for="targetBranch" class="form-label">Target branch (comma seperated)</label>
+      <input type="text" class="form-control" id="targetBranch" name="targetBranch" th:field="*{targetBranch}" aria-describedby="help_targetBranch" tabindex="0">
+      <div id="help_targetBranch" class="form-text"><span>e.g. ky/dev/6.0-patches, ky/dev/6.1</span></div>
+    </div>
+
+
+
+
+
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</html>

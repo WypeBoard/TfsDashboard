@@ -1,0 +1,9 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="frag(label, field, field_text)">
+  <div class="mb-3 form-group">
+    <label th:for="${@frontHelper.getId(field)}" th:class="form-label"><span th:text="${label}"></span></label>
+    <input type="text" class="form-control" th:id="${field}" th:name="${field}" aria-describedby="${'help_' + field}" tabindex="0">
+    <div id="${'help_' + field}" class="form-text"><span th:text="${field_text}"></span></div>
+  </div>
+</th:block>
+</html>

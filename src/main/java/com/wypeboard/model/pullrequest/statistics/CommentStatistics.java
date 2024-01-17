@@ -5,7 +5,6 @@ import com.wypeboard.adapter.azuredevops.model.Thread;
 import com.wypeboard.model.pullrequest.PullrequestParameter;
 import com.wypeboard.model.pullrequest.PullrequestResult;
 import com.wypeboard.model.pullrequest.helpers.CommentData;
-import com.wypeboard.model.pullrequest.helpers.VotingData;
 import com.wypeboard.model.pullrequest.type.PullrequestStatus;
 
 import java.util.HashMap;

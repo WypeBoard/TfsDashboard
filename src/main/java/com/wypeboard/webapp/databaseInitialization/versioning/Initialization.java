@@ -22,10 +22,10 @@ public class Initialization implements DatabaseVersioningApi {
                 "ID VARCHAR(36) PRIMARY KEY",
                 "EXECUTED_METHOD VARCHAR(500)",
                 "STATUS VARCHAR(50)",
-                "CREATEDBY VARCHAR(500)",
+                "CREATED_BY VARCHAR(500)",
                 "CREATED TIMESTAMP",
-                "ALTEREDBY VARCHAR(500)",
-                "ALTERED TIMESTAMP);");
+                "CHANGED_BY VARCHAR(500)",
+                "CHANGED TIMESTAMP);");
         jdbcTemplate.execute(createTableQuery);
     }
 

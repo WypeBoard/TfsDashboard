@@ -1,6 +1,5 @@
 package com.wypeboard.architecturetests;
 
-
 import com.tngtech.archunit.lang.ArchRule;
 import com.tngtech.archunit.library.Architectures;
 import org.junit.jupiter.api.extension.ExtendWith;
