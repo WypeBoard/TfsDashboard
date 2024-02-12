@@ -1,10 +1,9 @@
-package com.wypeboard.adapter.azuredevops.model;
+package com.wypeboard.adapter.azuredevops.model.git;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.concurrent.ArrayBlockingQueue;
 
 @JsonIgnoreProperties(ignoreUnknown = true, allowGetters = true)
 public class IdentityRefWithVote extends IdentityRef {

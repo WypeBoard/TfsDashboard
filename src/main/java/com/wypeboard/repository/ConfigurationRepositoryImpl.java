@@ -5,7 +5,6 @@ import com.wypeboard.model.persistence.domain.Configuration;
 import com.wypeboard.model.persistence.jpa.ConfigurationJpa;
 import com.wypeboard.model.persistence.types.ConfigurationName;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;

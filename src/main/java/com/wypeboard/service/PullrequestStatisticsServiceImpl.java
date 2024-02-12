@@ -2,8 +2,9 @@ package com.wypeboard.service;
 
 import com.wypeboard.adapter.azuredevops.AzureClient;
 import com.wypeboard.adapter.azuredevops.AzureFilters;
-import com.wypeboard.adapter.azuredevops.model.PullrequestResponse;
-import com.wypeboard.adapter.azuredevops.model.ThreadsResponse;
+import com.wypeboard.adapter.azuredevops.model.AzureConfiguration;
+import com.wypeboard.adapter.azuredevops.model.git.PullrequestResponse;
+import com.wypeboard.adapter.azuredevops.model.git.ThreadsResponse;
 import com.wypeboard.model.pullrequest.PullrequestCalculation;
 import com.wypeboard.model.pullrequest.PullrequestParameter;
 import com.wypeboard.model.pullrequest.PullrequestResult;

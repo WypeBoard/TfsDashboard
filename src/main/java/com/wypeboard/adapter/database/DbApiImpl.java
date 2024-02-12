@@ -2,10 +2,8 @@ package com.wypeboard.adapter.database;
 
 import com.wypeboard.connector.database.EntityManangerConnector;
 import com.wypeboard.model.persistence.base.DatabaseEnitity;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Collection;
 import java.util.List;
 
 @Component

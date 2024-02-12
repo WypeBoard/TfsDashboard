@@ -7,7 +7,8 @@ import java.util.function.Supplier;
 
 public enum DatabaseVersioning {
 
-    INTIALIZATION(Initialization::new);
+    INTIALIZATION(Initialization::new),
+    ;
 
     private final Supplier<DatabaseVersioningApi> constructor;
 
@@ -17,6 +18,10 @@ public enum DatabaseVersioning {
 
     public int getRank() {
         return this.ordinal();
+    }
+
+    public String getName() {
+        return this.name();
     }
 
     public DatabaseVersioningApi getVersioning() {

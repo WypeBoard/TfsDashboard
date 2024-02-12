@@ -1,9 +1,7 @@
 package com.wypeboard.repository;
 
 import com.wypeboard.model.persistence.base.DatabaseEnitity;
-import org.springframework.data.repository.Repository;
 
-import java.util.Collection;
 import java.util.List;
 
 public interface BaseRepository<T extends DatabaseEnitity> {

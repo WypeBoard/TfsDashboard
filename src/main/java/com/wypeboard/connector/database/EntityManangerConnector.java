@@ -2,7 +2,6 @@ package com.wypeboard.connector.database;
 
 import com.wypeboard.model.persistence.base.DatabaseEnitity;
 
-import java.util.Collection;
 import java.util.List;
 
 public interface EntityManangerConnector {

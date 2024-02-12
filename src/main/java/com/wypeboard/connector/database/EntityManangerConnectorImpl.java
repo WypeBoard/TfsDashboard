@@ -1,17 +1,15 @@
 package com.wypeboard.connector.database;
 
 import com.wypeboard.model.persistence.base.DatabaseEnitity;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import org.hibernate.Hibernate;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import java.util.ArrayList;
-import java.util.Collection;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
@@ -26,6 +24,10 @@ public class EntityManangerConnectorImpl implements EntityManangerConnector {
     public <T extends DatabaseEnitity> T persistEntity(T jpa) {
         String ident = jpa.getId();
         if (ident == null) {
+            jpa.setCreated(LocalDateTime.now());
+            jpa.setCreatedBy("SYSTEM");
+            jpa.setChanged(LocalDateTime.now());
+            jpa.setChangedBy("SYSTEM");
             entityManager.persist(jpa);
         } else {
             jpa = merge(jpa, ident);
@@ -36,6 +38,8 @@ public class EntityManangerConnectorImpl implements EntityManangerConnector {
     private <T extends DatabaseEnitity> T merge(T jpa, String ident) {
         Class<? extends T> aClass = Hibernate.getClass(jpa);
         if (getEntity(aClass, ident) != null) {
+            jpa.setChanged(LocalDateTime.now());
+            jpa.setChangedBy("SYSTEM");
             return entityManager.merge(jpa);
         }
         // Object should exist, but can not be found.

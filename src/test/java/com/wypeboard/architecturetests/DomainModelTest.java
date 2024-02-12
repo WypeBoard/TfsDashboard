@@ -1,10 +1,10 @@
 package com.wypeboard.architecturetests;
 
 import com.tngtech.archunit.lang.ArchRule;
-import com.tngtech.archunit.library.Architectures;
+import com.tngtech.archunit.junit.ArchUnitExtension;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-@ExtendWith(ArchUnitRunner.class)
+@ExtendWith(ArchUnitExtension.class)
 public class DomainModelTest {
     private static final String COM_WYPEBOARD = "com.wypeboard.";
 

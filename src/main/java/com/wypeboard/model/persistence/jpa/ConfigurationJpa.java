@@ -3,11 +3,10 @@ package com.wypeboard.model.persistence.jpa;
 import com.wypeboard.model.persistence.base.DatabaseEntityImpl;
 import com.wypeboard.model.persistence.types.ConfigurationName;
 import com.wypeboard.model.persistence.types.ConfigurationType;
-
-import javax.persistence.Column;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.MappedSuperclass;
+import jakarta.persistence.Column;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.MappedSuperclass;
 
 @MappedSuperclass
 public abstract class ConfigurationJpa extends DatabaseEntityImpl {
@@ -20,7 +19,7 @@ public abstract class ConfigurationJpa extends DatabaseEntityImpl {
     @Enumerated(value = EnumType.STRING)
     private ConfigurationName name;
 
-    @Column(name = "VALUE")
+    @Column(name = "CONFIG_VALUE")
     private String value;
 
     public ConfigurationType getType() {

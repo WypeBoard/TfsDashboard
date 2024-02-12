@@ -1,4 +1,4 @@
-package com.wypeboard.adapter.azuredevops.model;
+package com.wypeboard.adapter.azuredevops.model.git;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 

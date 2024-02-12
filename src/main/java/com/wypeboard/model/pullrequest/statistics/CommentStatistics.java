@@ -1,7 +1,7 @@
 package com.wypeboard.model.pullrequest.statistics;
 
-import com.wypeboard.adapter.azuredevops.model.Comment;
-import com.wypeboard.adapter.azuredevops.model.Thread;
+import com.wypeboard.adapter.azuredevops.model.git.Comment;
+import com.wypeboard.adapter.azuredevops.model.git.Thread;
 import com.wypeboard.model.pullrequest.PullrequestParameter;
 import com.wypeboard.model.pullrequest.PullrequestResult;
 import com.wypeboard.model.pullrequest.helpers.CommentData;

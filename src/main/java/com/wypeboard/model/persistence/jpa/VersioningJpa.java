@@ -1,9 +1,9 @@
 package com.wypeboard.model.persistence.jpa;
 
 import com.wypeboard.model.persistence.base.DatabaseEntityImpl;
+import jakarta.persistence.Column;
+import jakarta.persistence.MappedSuperclass;
 
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
 public abstract class VersioningJpa extends DatabaseEntityImpl {

@@ -1,10 +1,9 @@
 package com.wypeboard.model.pullrequest;
 
-import com.wypeboard.adapter.azuredevops.model.IdentityRefWithVote;
-import com.wypeboard.adapter.azuredevops.model.ThreadsResponse;
+import com.wypeboard.adapter.azuredevops.model.git.IdentityRefWithVote;
+import com.wypeboard.adapter.azuredevops.model.git.ThreadsResponse;
 import com.wypeboard.model.pullrequest.type.PullrequestStatus;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PullrequestParameter {

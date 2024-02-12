@@ -6,7 +6,5 @@ public interface DatabaseVersioningApi {
 
     void initialize(JdbcTemplate jdbcTemplate);
 
-    boolean isScriptAlreadyExecuted();
-
     void runScript();
 }

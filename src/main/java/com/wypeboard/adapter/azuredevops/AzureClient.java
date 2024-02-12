@@ -1,8 +1,8 @@
 package com.wypeboard.adapter.azuredevops;
 
 
-import com.wypeboard.adapter.azuredevops.model.PullrequestResponse;
-import com.wypeboard.adapter.azuredevops.model.ThreadsResponse;
+import com.wypeboard.adapter.azuredevops.model.git.PullrequestResponse;
+import com.wypeboard.adapter.azuredevops.model.git.ThreadsResponse;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -20,7 +20,6 @@ public class AzureClient {
     public AzureClient() {
         // Empty
     }
-
     public PullrequestResponse fetchPullRequest() {
         String requestUrl = getProjectApiUrl("/git/repositories/ATP0005/pullrequests");
         return AzureConnector.sendRequestAndParseResponse("GET", requestUrl, PullrequestResponse.class);

@@ -1,7 +1,7 @@
 package com.wypeboard.model.pullrequest.statistics;
 
-import com.wypeboard.adapter.azuredevops.model.IdentityRef;
-import com.wypeboard.adapter.azuredevops.model.IdentityRefWithVote;
+import com.wypeboard.adapter.azuredevops.model.git.IdentityRef;
+import com.wypeboard.adapter.azuredevops.model.git.IdentityRefWithVote;
 import com.wypeboard.model.pullrequest.PullrequestParameter;
 import com.wypeboard.model.pullrequest.PullrequestResult;
 import com.wypeboard.model.pullrequest.helpers.VotingData;
