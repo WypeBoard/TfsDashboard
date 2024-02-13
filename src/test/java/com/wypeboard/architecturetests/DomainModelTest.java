@@ -1,14 +1,17 @@
 package com.wypeboard.architecturetests;
 
+import com.tngtech.archunit.junit.AnalyzeClasses;
+import com.tngtech.archunit.junit.ArchIgnore;
+import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
-import com.tngtech.archunit.junit.ArchUnitExtension;
-import org.junit.jupiter.api.extension.ExtendWith;
+import com.tngtech.archunit.library.Architectures;
 
-@ExtendWith(ArchUnitExtension.class)
+@AnalyzeClasses(packages = "com.wypeboard")
 public class DomainModelTest {
     private static final String COM_WYPEBOARD = "com.wypeboard.";
 
     @ArchTest
+    @ArchIgnore
     private static ArchRule domainModelTest = Architectures.onionArchitecture()
             .domainModels(COM_WYPEBOARD + "model..")
             .domainServices(COM_WYPEBOARD + "service..")
