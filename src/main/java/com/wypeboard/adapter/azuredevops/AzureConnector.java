@@ -6,6 +6,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.wypeboard.core.exception.AdoCoreException;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,9 +18,15 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
+@Component
 public class AzureConnector {
 
-    private static final String AUTHENTICATIONTOKEN = "";
+    @Value("${com.wypeboard.connector.azure_token}")
+    private static String AUTHENTICATIONTOKEN;
+
+    public AzureConnector(@Value("${com.wypeboard.connector.azure_token}") String token) {
+        AzureConnector.AUTHENTICATIONTOKEN = token;
+    }
 
     private static final ObjectMapper objectMapper = new ObjectMapper()
             .setSerializationInclusion(JsonInclude.Include.NON_NULL)
