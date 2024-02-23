@@ -21,7 +21,6 @@ import java.util.Base64;
 @Component
 public class AzureConnector {
 
-    @Value("${com.wypeboard.connector.azure_token}")
     private static String AUTHENTICATIONTOKEN;
 
     public AzureConnector(@Value("${com.wypeboard.connector.azure_token}") String token) {
