@@ -1,4 +1,4 @@
-package com.wypeboard.repository;
+package com.wypeboard.repository.api;
 
 import com.wypeboard.model.persistence.base.DatabaseEnitity;
 

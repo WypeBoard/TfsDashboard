@@ -1,6 +1,6 @@
 package com.wypeboard.controller;
 
-import com.wypeboard.service.PullrequestStatisticsService;
+import com.wypeboard.service.api.PullrequestStatisticsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -18,7 +18,7 @@ public class DataInitializationService {
     }
 
     public void initData() {
-        for (DatabaseVersioning databaseVersioning : DatabaseVersioning.values()) {
+        /*for (DatabaseVersioning databaseVersioning : DatabaseVersioning.values()) {
             DatabaseVersioningApi versioningApi = databaseVersioning.getVersioning();
             if (isVersioningExecuted(databaseVersioning.name())) {
                 continue;
@@ -26,7 +26,7 @@ public class DataInitializationService {
             versioningApi.initialize(jdbcTemplate);
             versioningApi.runScript();
             registerExecution(databaseVersioning.name());
-        }
+        }*/
     }
 
     private void registerExecution(String name) {

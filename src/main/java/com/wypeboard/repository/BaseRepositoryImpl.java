@@ -2,6 +2,7 @@ package com.wypeboard.repository;
 
 import com.wypeboard.adapter.database.DbApi;
 import com.wypeboard.model.persistence.base.DatabaseEnitity;
+import com.wypeboard.repository.api.BaseRepository;
 
 import java.util.List;
 

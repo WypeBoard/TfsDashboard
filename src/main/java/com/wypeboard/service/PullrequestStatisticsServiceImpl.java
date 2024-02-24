@@ -2,7 +2,6 @@ package com.wypeboard.service;
 
 import com.wypeboard.adapter.azuredevops.AzureClient;
 import com.wypeboard.adapter.azuredevops.AzureFilters;
-import com.wypeboard.adapter.azuredevops.model.AzureConfiguration;
 import com.wypeboard.adapter.azuredevops.model.git.PullrequestResponse;
 import com.wypeboard.adapter.azuredevops.model.git.ThreadsResponse;
 import com.wypeboard.model.pullrequest.PullrequestCalculation;
@@ -11,6 +10,7 @@ import com.wypeboard.model.pullrequest.PullrequestResult;
 import com.wypeboard.model.pullrequest.helpers.CommentData;
 import com.wypeboard.model.pullrequest.helpers.VotingData;
 import com.wypeboard.model.pullrequest.type.PullrequestStatus;
+import com.wypeboard.service.api.PullrequestStatisticsService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

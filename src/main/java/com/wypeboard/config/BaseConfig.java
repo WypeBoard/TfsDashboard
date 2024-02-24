@@ -4,7 +4,7 @@ import com.wypeboard.adapter.config.AdapterConfig;
 import com.wypeboard.connector.config.ConnectorConfig;
 import com.wypeboard.controller.ControllerConfig;
 import com.wypeboard.repository.config.RepositoryConfig;
-import com.wypeboard.service.ServiceConfig;
+import com.wypeboard.service.config.ServiceConfig;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
